@@ -18,17 +18,11 @@ import java.util.*;
  */
 public class BeanFactory {
 
-    /**
-     * 任务一：扫描包，通过反射技术实例化对象并且存储待用（map集合）
-     * 任务二：对外提供获取实例对象的接口（根据id获取）
-     */
-
     private static Map<String, Object> map = new HashMap<>();  // 存储对象
 
 
     static {
         try {
-            //任务一、扫描包，通过反射技术实例化对象并且存储待用（map集合）
             map.put("annoHandlerMap", new HashMap<>());
             //通过反射技术，扫描包并获取反射对象集合
             Reflections edus = new Reflections("thefool");

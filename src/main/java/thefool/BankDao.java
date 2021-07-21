@@ -32,9 +32,6 @@ public class BankDao {
         preparedStatement.setString(2,accountTwo);
         preparedStatement.addBatch();
         preparedStatement.executeBatch();
-//        throw new SQLException();
+        throw new SQLException();
     }
-
-
-
 }
